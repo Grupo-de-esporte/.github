@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MatchPoint</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .answer {
+            display: none;
+            margin-top: 5px;
+            font-style: Arial;
+            color: #044cf4;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="assets/imagens/matchpoint.jpeg" alt="MatchPoint Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">perfil</a></li>
+                <li><a href="#">esportes</a></li>
+                <li><a href="#">criar grupo</a></li>
+                <li><a href="#">mapa</a></li>
+                <li><a href="#">FAQ</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="faq">
+            <div class="faq-header">
+                <h2></h2>
+            </div>
+            <div class="faq-questions">
+                <h3>PERGUNTAS FREQUENTES</h3>
+                <ul>
+                    <li>
+                        1. Como posso encontrar um grupo de esportes próximo a mim ?
+                        <div class="answer">Você pode encontrar um grupo de esportes próximo a você usando a ferramenta de busca em nosso site ou consultando o mapa de grupos disponíveis.</div>
+                    </li>
+                    <li>
+                        2. É necessário algum custo para participar dos grupos de esporte listados no site ?
+                        <div class="answer">A participação na maioria dos grupos é gratuita, mas alguns podem cobrar uma taxa. Verifique os detalhes de cada grupo para mais informações.</div>
+                    </li>
+                    <li>
+                        3. Como posso me registrar no site ?
+                        <div class="answer">Para se registrar, clique no botão 'Registrar' no canto superior direito da página e preencha o formulário com suas informações.</div>
+                    </li>
+                    <li>
+                        4. O que faço se não houver nenhum grupo para o esporte que eu pratico na minha área ?
+                        <div class="answer">Se não houver um grupo para o esporte que você pratica, você pode criar um novo grupo no site e convidar outras pessoas a se juntarem.</div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="ask-question">
+            <h2>ESCREVA SUA PERGUNTA ABAIXO</h2>
+            <textarea placeholder="Digite aqui sua dúvida."></textarea>
+            <button type="button">ENVIAR</button>
+        </section>
+    </main>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-questions li');
+
+            faqItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    const answer = item.querySelector('.answer');
+                    if (answer.style.display === 'block') {
+                        answer.style.display = 'none';
+                    } else {
+                        answer.style.display = 'block';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
