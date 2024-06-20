@@ -1,0 +1,182 @@
+html {
+    margin: 0%;
+    padding: 0%;
+}
+
+body {
+    margin: 0%;
+    width: 100%;
+    height: 100%;
+}
+
+/* Começo cabeçalho */
+.cabecalho {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    align-items: center;
+    
+}
+
+.imglogo img {
+    width: 100px;
+    height: auto;
+}
+
+.secoes ul li {
+    list-style-type: none;
+    display: inline-block;
+    padding-right: 50px;
+    padding-top: 0px;
+}
+
+.secoes ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: x-large;
+
+}
+
+.secoes :first-child {
+    display: flex;
+    align-items: center;
+}
+
+.secoes ul li a:hover {
+    color: brown;
+}
+
+.secoes {
+    color: white;
+}
+
+div.FAQ {
+    float: right;
+    color: white;
+}
+
+.texto {
+    color: black;
+}
+
+.texto a:hover {
+    color: brown;
+}
+
+.FAQ a:hover {
+    color: brown;
+}
+
+.FAQ a {
+    text-decoration: none;
+    color: white;
+    font-size: x-large;
+}
+
+/* Fim cabeçalho *
+
+/* Começo perfil*/
+.card img{
+    border-radius: 50%;
+    
+}
+.card{
+    padding-right: 10%;
+    padding-left: 10%;
+    padding-top: 3%;
+    width: 70%;
+    height: auto;
+}
+.queropracima{
+    padding-top: 5%;
+}
+.perfil{
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    margin-top: 3%;
+
+    position: relative;
+}
+.avaliacoes{
+    margin-top: 5%;
+    margin-left: 4%;
+    margin-right: 4%;
+}
+
+main{
+    width: 100%;
+}
+button {
+    background-color:   #aaaaaa;
+    color: #fff;
+    border: none;
+    padding: 0.5% 1%;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: brown;
+}
+.querolado{
+    padding-right: 5%;
+}
+textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+.salvar , .editar{
+margin-left: 90%;
+}
+
+/* Fim Perfil */
+
+/* Começo rodape */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    text-align: center;
+    padding: 0.01%;
+    height: 4.5%;
+}
+
+footer p {
+    color: white;
+    text-align: center;
+}
+
+/* Fim do rodape */
+
+/* perfil visualizavel */
+main a{
+    text-decoration: none;
+}
+.Perfilvisualizavel{
+    margin-top: 5%;
+    margin-left: 10%;
+}
+#nomeperfilvisualizavel{
+    margin-top: 12%;
+}
+#carddoperfilvisualizavel{
+    width: 500px;
+    height: auto;
+}
+#carddoperfilvisualizavel img{
+    border-radius: 50%;
+}
+#carddoperfilvisualizavel h5{
+    align-items: center;
+    text-align: center;
+    font-size:25px;
+}
+.search-container{
+    position: fixed;
+    right: 0;
+}

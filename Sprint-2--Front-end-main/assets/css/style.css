@@ -1,0 +1,167 @@
+html {
+    margin: 0%;
+    padding: 0%;
+}
+
+body {
+    margin: 0%;
+    width: 100%;
+    height: 100%;
+}
+
+/* Começo cabeçalho */
+.cabecalho {
+    width: 100%;
+    padding: 1%;
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    align-items: center;
+}
+
+.imglogo img {
+    width: 100px;
+    height: auto;
+
+}
+
+.secoes ul li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 30px;
+
+}
+
+.secoes ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: x-large;
+
+}
+
+.secoes :first-child {
+    display: flex;
+    align-items: center;
+}
+
+.secoes ul li a:hover {
+    color: brown;
+}
+
+.secoes {
+    color: white;
+}
+
+div.FAQ {
+    float: right;
+    color: white;
+}
+
+.texto {
+    color: black;
+}
+
+.texto a:hover {
+    color: brown;
+}
+
+.FAQ a:hover {
+    color: brown;
+}
+
+.FAQ a {
+    text-decoration: none;
+    color: white;
+    font-size: x-large;
+}
+
+/* Fim cabeçalho *
+
+/* Começo perfil*/
+.card img{
+    border-radius: 50%;
+}
+.card{
+    width: 50%;
+    height: auto;
+}
+.perfil{
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    margin-top: 3%;
+    position: relative;
+}
+.avaliacoes{
+    margin-left: 4%;
+    margin-right: 4%;
+}
+
+main{
+    width: 100%;
+}
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 1% 3%;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+
+}
+
+/* Fim Perfil */
+
+/* Começo rodape */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    text-align: center;
+    padding: 0.01%;
+}
+
+footer p {
+    color: white;
+    text-align: center;
+}
+
+/* Fim do rodape */
+
+/* perfil visualizavel */
+main a{
+    text-decoration: none;
+}
+.Perfilvisualizavel{
+    margin-top: 5%;
+    margin-left: 10%;
+}
+#nomeperfilvisualizavel{
+    margin-top: 12%;
+}
+#carddoperfilvisualizavel{
+    width: 20%;
+    height: auto;
+}
+#carddoperfilvisualizavel img{
+    border-radius: 50%;
+}
+#carddoperfilvisualizavel h5{
+    align-items: center;
+    text-align: center;
+}
+.search-container{
+    position: fixed;
+    right: 0;
+}
