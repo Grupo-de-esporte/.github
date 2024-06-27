@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MatchPoint</title>
+    <link rel="stylesheet" href="../assets/css/homepage.css">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<nav>
+    <a href="#about">sobre</a>
+</nav>
+
+<section class="hero hero-1" id="home">
+    <div class="overlay"></div>
+    <img src="../assets/img/Logo__1_-removebg-preview (1).png" alt="MatchPoint Logo" class="logo">
+    <div class="hero-content">
+        <h1>Descubra seu Parceiro de Esporte Universitário: Conecte-se, Colabore e Cresça no Campus!</h1>
+        <p>Transforme sua rotina de exercícios em uma jornada compartilhada, otimizando seu desempenho e ampliando suas conexões acadêmicas através do esporte.</p>
+        <a href="#login" class="btn">Quero participar!</a>
+    </div>
+</section>
+
+<section class="hero hero-2" id="about">
+    <div class="overlay"></div>
+    <div class="hero-content">
+        <h1>Bem-vindo ao MatchPoint!</h1>
+        <p>
+            Somos um grupo de amigos que compartilhava uma mesma frustração: a dificuldade de encontrar parceiros para praticar esportes no campus da nossa universidade. Percebemos que muitos estudantes tinham o mesmo problema, e foi então que tivemos a ideia de criar uma solução prática e divertida para reunir pessoas com o mesmo interesse.
+        </p>
+        <p>
+            O MatchPoint nasceu com o objetivo de facilitar a formação de grupos para a prática esportiva. Nosso site permite que você crie ou participe de eventos esportivos, tornando mais fácil encontrar parceiros para jogar uma partida de basquete, organizar uma pelada de futebol ou praticar qualquer outra atividade física que você goste.
+        </p>
+        <p>
+            Nosso principal objetivo é organizar grupos de esportes de maneira eficiente, atrair mais pessoas para o universo esportivo e incentivar a prática regular de atividades físicas. Acreditamos que o esporte é uma excelente maneira de fazer novas amizades, manter um estilo de vida saudável e melhorar o bem-estar geral.
+        </p>
+        <p>
+            Venha fazer parte do MatchPoint, crie ou participe de grupos esportivos e ajude a transformar a prática de esportes no campus!
+        </p>
+    </div>
+</section>
+
+<section id="login">
+    <!-- Aqui você pode adicionar o formulário de login -->
+</section>
+
+<script>
+    document.querySelector('nav a[href="#about"]').addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector('#about').scrollIntoView({ behavior: 'smooth' });
+    });
+</script>
+
+</body>
+</html>
