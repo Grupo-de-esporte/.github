@@ -9,36 +9,3 @@ document.querySelector('button').addEventListener('click', function() {
         textarea.value = ''; // Limpa o conteúdo da caixa de mensagem
     }
 });
-
-document.addEventListener('DOMContentLoaded', function() {
-    const faqItems = document.querySelectorAll('.faq-questions li');
-
-    faqItems.forEach(item => {
-        item.addEventListener('click', function() {
-            const answer = item.querySelector('.answer');
-            if (answer.style.display === 'block') {
-                answer.style.display = 'none';
-            } else {
-                answer.style.display = 'block';
-            }
-        });
-    });
-});
-document.addEventListener('DOMContentLoaded', function () {
-    const questions = document.querySelectorAll('.faq-questions ul li');
-
-    questions.forEach(question => {
-        const questionText = question.querySelector('.question');
-        const answer = question.querySelector('.answer');
-
-        questionText.addEventListener('click', () => {
-            question.classList.toggle('open'); // Adiciona ou remove a classe 'open' no elemento li
-
-            if (question.classList.contains('open')) {
-                answer.style.display = 'block';
-            } else {
-                answer.style.display = 'none';
-            }
-        });
-    });
-});

@@ -40,3 +40,15 @@ function cards() {
 document.addEventListener("DOMContentLoaded", function () {
     cards();
 });
+
+
+// Exemplo de JavaScript para filtrar os perfis conforme o usuário digita
+function preenchePerfil() {
+    // Código para preencher os perfis na div #container-dos-cards
+}
+
+// Exemplo de evento para buscar perfis ao clicar no botão de busca
+document.querySelector('.search-button').addEventListener('click', function() {
+    var searchTerm = document.querySelector('.search-input').value;
+    // Lógica para buscar perfis com base em searchTerm
+});
