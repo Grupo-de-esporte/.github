@@ -16,13 +16,6 @@ function logar() {
 
   if (validaLogin) {
     alert("Login bem-sucedido");
-
-    // Criar o objeto JSON com o usuário logado
-    var usuarioLogado = { usuario: pegaUsuario };
-
-    // Armazenar o objeto JSON no localStorage
-    localStorage.setItem("usuarioLogado", JSON.stringify(usuarioLogado));
-
     location.href = 'HomePage.html';
   } else {
     alert("Usuário ou senha incorreta");
