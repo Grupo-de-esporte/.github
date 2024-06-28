@@ -14,8 +14,8 @@
 </head>
 
 <body>
-     <!-- Início do cabeçalho -->
-     <header class="cabecalho">
+    <!-- Início do cabeçalho -->
+    <header class="cabecalho">
         <div class="imglogo">
             <a href="HomePage.html"><img src="assets/img/matchpoint.png" alt="Logo MatchPoint"></a>
         </div>
@@ -36,18 +36,20 @@
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Grupos</a>
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">Grupos</a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="CriarGrupo.html" >Criar Grupo</a></li>
-                        <li><a class="dropdown-item" href="MeusGrupos.html" >Meus Grupos</a></li>
+                        <li><a class="dropdown-item" href="CriarGrupo.html">Criar Grupo</a></li>
+                        <li><a class="dropdown-item" href="MeusGrupos.html">Meus Grupos</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Esportes</a>
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">Esportes</a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#" >Volei</a></li>
-                        <li><a class="dropdown-item" href="#" >Futebol</a></li>
-                        <li><a class="dropdown-item" href="#" >Basquete</a></li>
+                        <li><a class="dropdown-item" href="#">Volei</a></li>
+                        <li><a class="dropdown-item" href="#">Futebol</a></li>
+                        <li><a class="dropdown-item" href="#">Basquete</a></li>
                     </ul>
                 </li>
                 <li><a href="Mapa.html">Mapa</a></li>
@@ -59,24 +61,25 @@
     </header>
     <!-- Fim do cabeçalho -->
 
-
-
     <div class="container">
-        <h1>Meu Perfil</h1>
         <div class="profile">
-            <label for="username">Nome de Usuário: </label>
-            <span id="usernameDisplay"></span>
-            <button onclick="changeUsername()">Alterar Nome de Usuário</button>
-
-            <label for="password">Senha: </label>
-            <span id="passwordDisplay">*********</span>
-            <button onclick="changePassword()">Alterar Senha</button>
-
+            <div class="profile-info">
+                <div class="profile-img">
+                    <img src="assets/img/default_profile.jpg" alt="Foto de perfil">
+                </div>
+                <div class="profile-details">
+                    <h1 id="usernameDisplay"></h1>
+                    <button onclick="changeUsername()">Alterar Nome de Usuário</button>
+                    <p id="bio" contenteditable="true">Descrição do perfil...</p>
+                    <button onclick="saveBio()">Salvar Bio</button>
+                    <button onclick="changePassword()">Alterar Senha</button>
+                </div>
+            </div>
+            <hr>
             <h2>Comentários</h2>
             <ul id="commentsList"></ul>
         </div>
     </div>
-
 
     <footer>
         <p>© 2024 copyright MatchPoint</p>
@@ -86,7 +89,6 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
     <script src="assets/script/script_MeuPerfil.js"></script>
-
 </body>
 
 </html>
