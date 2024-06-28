@@ -1,0 +1,95 @@
+/* Estilos para o perfil escolhido */
+
+.perfil {
+    margin-top: 20px;
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+}
+
+.perfil .card {
+    background-color: #2d2d2d;
+    color: #ccc;
+    border: none;
+    border-radius: 8px;
+}
+
+.perfil .card-body {
+    padding: 20px;
+}
+
+.perfil .card-title {
+    color: #f36f21;
+    font-size: 24px;
+}
+
+.perfil .text-body-secondary {
+    color: #999;
+}
+
+.perfil .card-text {
+    color: #ccc;
+}
+
+.perfil .avaliacoes {
+    margin-top: 20px;
+}
+
+.perfil .avaliacoes h4 {
+    color: #f36f21;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.perfil .avaliacoes button {
+    background-color: #f36f21;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.perfil .avaliacoes button:hover {
+    opacity: 0.8;
+}
+
+.perfil textarea {
+    width: 100%;
+    min-height: 100px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 10px;
+    resize: vertical;
+}
+
+.perfil #listaAvaliacoes {
+    margin-top: 10px;
+}
+
+.perfil .row.g-0 .col-md-4 img {
+    border-radius: 50%;
+    max-width: 100%;
+    height: auto;
+    border: 5px solid #f36f21;
+}
+
+@media (max-width: 768px) {
+    .perfil .row.g-0 {
+        flex-direction: column;
+    }
+    .perfil .row.g-0 .col-md-4 {
+        text-align: center;
+    }
+    .perfil .row.g-0 .col-md-4 img {
+        margin-top: 20px;
+    }
+    .perfil .row.g-0 .col-md-8 {
+        margin-top: 20px;
+    }
+}
+
+/* Outros estilos, se necessário */
