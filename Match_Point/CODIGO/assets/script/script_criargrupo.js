@@ -64,17 +64,17 @@ document.addEventListener('DOMContentLoaded', function() {
         imageSelectionContainer.innerHTML = '';
 
         if (selectedSport === 'volei') {
-            criarOpcaoDeImagem('assets/imagens/volei1.png');
-            criarOpcaoDeImagem('assets/imagens/volei2.png');
-            criarOpcaoDeImagem('assets/imagens/volei3.png');
+            criarOpcaoDeImagem('assets/img/volei1.png');
+            criarOpcaoDeImagem('assets/img/volei2.png');
+            criarOpcaoDeImagem('assets/img/volei3.png');
         } else if (selectedSport === 'futebol') {
-            criarOpcaoDeImagem('assets/imagens/futebol1.png');
-            criarOpcaoDeImagem('assets/imagens/futebol2.png');
-            criarOpcaoDeImagem('assets/imagens/futebol3.png');
+            criarOpcaoDeImagem('assets/img/futebol1.png');
+            criarOpcaoDeImagem('assets/img/futebol2.png');
+            criarOpcaoDeImagem('assets/img/futebol3.png');
         } else if (selectedSport === 'basquete') {
-            criarOpcaoDeImagem('assets/imagens/basquete1.png');
-            criarOpcaoDeImagem('assets/imagens/basquete2.png');
-            criarOpcaoDeImagem('assets/imagens/basquete3.png');
+            criarOpcaoDeImagem('assets/img/basquete1.png');
+            criarOpcaoDeImagem('assets/img/basquete2.png');
+            criarOpcaoDeImagem('assets/img/basquete3.png');
         }
     });
 
