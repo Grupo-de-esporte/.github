@@ -4,15 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MatchPoint</title>
-    <link rel="stylesheet" href="assets/css/homepage.css">
+    <link rel="stylesheet" href="assets/css/paginainicial.css">
+    <link rel="stylesheet" href="assets/css/style_header.css">
+    <link rel="stylesheet" href="assets/css/style_footer.css">
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<nav>
-    <a href="#about">sobre</a>
-</nav>
+<!-- Início do cabeçalho -->
+<header class="cabecalho">
+    <div class="imglogo">
+        <a href="HomePage.html"><img src="assets/img/matchpoint.png" alt="Logo MatchPoint"></a>
+    </div>
 
+    <!-- Links para seções da página -->
+    <nav class="secoes">
+        <ul>
+            <li><a href="#home">Início</a></li>
+            <li><a href="#about">Sobre</a></li>
+        </ul>
+    </nav>
+
+    <!-- Botão de Login/Cadastro -->
+    <div class="login-cadastro">
+        <a href="Login.html" class="btn">Login/Cadastro</a>
+    </div>
+
+    <!-- Botão de FAQ -->
+    <div class="FAQ">
+        <a href="FAQ.html"><i class="fa-regular fa-circle-question"></i> FAQ</a>
+    </div>
+</header>
+<!-- Fim do cabeçalho -->
+
+
+<!-- Conteúdo da página -->
 <section class="hero hero-1" id="home">
     <div class="overlay"></div>
     <img src="assets/img/Logo__1_-removebg-preview (1).png" alt="MatchPoint Logo" class="logo">
@@ -42,14 +68,14 @@
     </div>
 </section>
 
-<section id="login">
-    <!-- Aqui você pode adicionar o formulário de login -->
-</section>
-
+<!-- Script para scroll suave -->
 <script>
-    document.querySelector('nav a[href="#about"]').addEventListener('click', function(e) {
-        e.preventDefault();
-        document.querySelector('#about').scrollIntoView({ behavior: 'smooth' });
+    document.querySelectorAll('nav a').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const sectionID = this.getAttribute('href').substring(1);
+            document.getElementById(sectionID).scrollIntoView({ behavior: 'smooth' });
+        });
     });
 </script>
 
