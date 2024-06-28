@@ -2,7 +2,8 @@
 function loadData() {
     let profileData = JSON.parse(localStorage.getItem('usuarioLogado')) || {
         "usuario": "user1",  // Dados padrão se nenhum estiver armazenado
-        "senha": "defaultPassword"  // Senha padrão, só para exemplo
+        "senha": "defaultPassword",  // Senha padrão, só para exemplo
+        "bio": "Descrição do perfil..."  // Bio padrão
     };
 
     let commentsData = JSON.parse(localStorage.getItem('commentsData')) || {
@@ -16,8 +17,8 @@ function loadData() {
     return { profileData, commentsData, loginData };
 }
 
-// Função para salvar dados no localStorage
-function saveData(profileData, commentsData, loginData) {
+// Função para salvar dados do perfil no localStorage
+function saveProfileData(profileData, commentsData, loginData) {
     localStorage.setItem('usuarioLogado', JSON.stringify(profileData));
     localStorage.setItem('commentsData', JSON.stringify(commentsData));
     localStorage.setItem('login', JSON.stringify(loginData));
@@ -28,12 +29,13 @@ function loadProfile() {
     const { profileData, commentsData } = loadData();
 
     const usernameDisplay = document.getElementById('usernameDisplay');
-    const usernameTitle = document.getElementById('usernameTitle');
-    usernameDisplay.textContent = profileData.usuario;
-    usernameTitle.textContent = `(${profileData.usuario})`;
+    usernameDisplay.textContent = profileData.usuario; // Exibir o nome de usuário
 
     const passwordDisplay = document.getElementById('passwordDisplay');
     passwordDisplay.textContent = "*********"; // Ajuste conforme necessário
+
+    const bioElement = document.getElementById('bio');
+    bioElement.textContent = profileData.bio; // Exibir a bio
 
     const commentsList = document.getElementById('commentsList');
     commentsList.innerHTML = ''; // Limpa a lista de comentários antes de recarregar
@@ -45,13 +47,24 @@ function loadProfile() {
 
         const likeButton = document.createElement('button');
         likeButton.textContent = 'Curtir';
-        likeButton.addEventListener('click', function() {
+        likeButton.addEventListener('click', function () {
             alert(`Você curtiu o comentário de ${user}: ${comment}`);
         });
 
         listItem.appendChild(likeButton);
         commentsList.appendChild(listItem);
     }
+}
+
+// Função para salvar a bio editada
+function saveBio() {
+    const { profileData, commentsData, loginData } = loadData();
+    const newBio = document.getElementById('bio').textContent;
+
+    profileData.bio = newBio;
+    saveProfileData(profileData, commentsData, loginData);
+
+    alert("Bio salva com sucesso!");
 }
 
 // Função para atualizar nome de usuário nos contatos
@@ -87,35 +100,36 @@ function changeUsername() {
         updateUsernameInContacts(oldUsername, newUsername, loginData);
 
         // Salvar os dados atualizados
-        saveData(profileData, commentsData, loginData);
+        saveProfileData(profileData, commentsData, loginData);
 
         // Atualiza o nome de usuário na tela
         const usernameDisplay = document.getElementById('usernameDisplay');
-        const usernameTitle = document.getElementById('usernameTitle');
         usernameDisplay.textContent = newUsername;
-        usernameTitle.textContent = `(${newUsername})`;
     }
 }
 
 // Função para alterar a senha
 function changePassword() {
     const { profileData, commentsData, loginData } = loadData();
-    const username = profileData.usuario;
+    const newPassword = prompt("Digite sua nova senha:");
 
-    const newPassword = prompt("Digite uma nova senha:");
     if (newPassword) {
         profileData.senha = newPassword;
 
-        // Atualiza a senha do contato nos dados de login
-        updatePasswordInContacts(username, newPassword, loginData);
+        // Atualiza a senha nos contatos
+        updatePasswordInContacts(profileData.usuario, newPassword, loginData);
 
-        // Salvar os dados atualizados
-        saveData(profileData, commentsData, loginData);
+        // Salva os dados atualizados
+        saveProfileData(profileData, commentsData, loginData);
 
+        // Atualiza a exibição de senha na tela (opcional, depende de como deseja exibir)
+        const passwordDisplay = document.getElementById('passwordDisplay');
+        passwordDisplay.textContent = "*********";
+        
         alert("Senha alterada com sucesso!");
     }
 }
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     loadProfile();
 });
