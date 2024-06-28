@@ -9,6 +9,7 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
         <link rel="stylesheet" href="assets/css/style_footer.css">
         <link rel="stylesheet" href="assets/css/style_header.css">
+        <link rel="stylesheet" href="assets/css/style_meusgrupos.css">
         
     <title>MatchPoint</title><!-- Titulo da pagina -->
     <script src="https://kit.fontawesome.com/9847d1c927.js" crossorigin="anonymous"></script>
@@ -52,14 +53,26 @@
                         <li><a class="dropdown-item" href="#" >Basquete</a></li>
                     </ul>
                 </li>
-                <li><a href="#">Mapa</a></li>
+                <li><a href="Mapa.html">Mapa</a></li>
             </ul>
         </nav>
         <div class="FAQ">
-            <a href="#"><i class="fa-regular fa-circle-question"></i> FAQ</a>
+            <a href="FAQ.html"><i class="fa-regular fa-circle-question"></i> FAQ</a>
         </div>
     </header>
     <!-- Fim do cabeçalho -->
+
+    <!-- Começo dos cards-->
+    <div class="container grupos-container">
+        <div class="row" id="grupos-row">
+        </div>
+        <div class="text-center" id="empty-message" style="display: none;">
+            <p>Você ainda não criou nenhum grupo</p>
+            <button class="btn" onclick="window.location.href='CriarGrupo.html'">Criar Grupo</button>
+        </div>
+    </div>
+
+    <!-- FIM dos cards-->
 
 
 
@@ -74,8 +87,8 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
     <!--script q faz o javacript funcionar -->
-
-    <script src="assets/script/script_HomePage.js"></script>
+    <script src="assets/script/script.js"></script>
+    <script src="assets/script/script_HOMEPAGE.js"></script>
 </body>
 
 </html>

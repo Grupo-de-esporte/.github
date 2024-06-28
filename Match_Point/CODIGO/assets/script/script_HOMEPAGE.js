@@ -57,64 +57,10 @@ document.addEventListener("DOMContentLoaded", function() {
                 card.appendChild(location);
                 card.appendChild(sport);
 
-                // Removendo a criação do botão EDITAR
-                // const button = document.createElement('button');
-                // button.className = 'editar-button';
-                // button.textContent = 'EDITAR';
-                // card.appendChild(button);
-
-                const deleteButton = document.createElement('button');
-                deleteButton.className = 'deletar-button';
-                deleteButton.textContent = 'DELETAR';
-                deleteButton.onclick = () => showConfirmDelete(card, index, deleteButton);
-
-                card.appendChild(deleteButton);
-
                 col.appendChild(card);
                 gruposContainer.appendChild(col);
             });
         }
-    }
-
-    function showConfirmDelete(card, index, deleteButton) {
-        if (card.querySelector('.confirm-delete')) {
-            return;
-        }
-
-        deleteButton.disabled = true;
-
-        const confirmDiv = document.createElement('div');
-        confirmDiv.className = 'confirm-delete';
-
-        const confirmText = document.createElement('p');
-        confirmText.textContent = 'Tem certeza que deseja deletar este grupo?';
-
-        const yesButton = document.createElement('button');
-        yesButton.className = 'confirm-yes';
-        yesButton.textContent = 'Sim';
-        yesButton.onclick = () => deleteGroup(index);
-
-        const noButton = document.createElement('button');
-        noButton.className = 'confirm-no';
-        noButton.textContent = 'Não';
-        noButton.onclick = () => {
-            card.removeChild(confirmDiv);
-            deleteButton.disabled = false;
-        };
-
-        confirmDiv.appendChild(confirmText);
-        confirmDiv.appendChild(yesButton);
-        confirmDiv.appendChild(noButton);
-
-        card.appendChild(confirmDiv);
-    }
-
-    function deleteGroup(index) {
-        const gruposJSON = localStorage.getItem('grupos');
-        let grupos = gruposJSON ? JSON.parse(gruposJSON) : [];
-        grupos.splice(index, 1);
-        localStorage.setItem('grupos', JSON.stringify(grupos));
-        loadGroups();
     }
 
     loadGroups();
