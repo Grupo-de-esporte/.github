@@ -78,3 +78,37 @@
 .ask-question button:hover {
     background-color: #333;
 }
+/* Estilo adicional para FAQ e seção de perguntas */
+.faq-questions ul {
+    list-style: none;
+    padding: 0;
+}
+
+.faq-questions ul li {
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.faq-questions ul li .answer {
+    display: none;
+    margin-top: 10px;
+    padding-left: 20px;
+    border-left: 2px solid #f36f21;
+}
+
+.faq-questions ul li .question {
+    cursor: pointer;
+    display: inline-block;
+    color: #f36f21;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.faq-questions ul li .question::after {
+    content: '\25BC'; /* Código Unicode para a seta para baixo */
+    margin-left: 5px;
+}
+
+.faq-questions ul li.open .question::after {
+    content: '\25B2'; /* Código Unicode para a seta para cima quando aberto */
+}
