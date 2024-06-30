@@ -66,21 +66,46 @@
         <div class="profile">
             <div class="profile-info">
                 <div class="profile-img">
-                    <img src="assets/img/default_profile.jpg" alt="Foto de perfil">
+                    <img id="userPhoto" src="" alt="Foto de perfil">
+                    <button id="editPhotoButton">Editar Imagem</button>
                 </div>
+                
                 <div class="profile-details">
                     <h1 id="usernameDisplay"></h1>
                     <button onclick="changeUsername()">Alterar Nome de Usuário</button>
-                    <p id="bio" contenteditable="true">Descrição do perfil...</p>
+                    <div class="bio-section">
+                        <label for="bio-input">Biografia:</label>
+                        <p id="bio" contenteditable="true"></p>
+                    </div>
                     <button onclick="saveBio()">Salvar Bio</button>
                     <button onclick="changePassword()">Alterar Senha</button>
                 </div>
+                
             </div>
             <hr>
             <h2>Comentários</h2>
-            <ul id="commentsList"></ul>
+            <ul id="commentsList">
+                <!-- Exemplo de comentário -->
+                <li>
+                    <p>Este é um comentário de exemplo.</p>
+                    <button>Editar</button>
+                    <button>Excluir</button>
+                </li>
+            </ul>
         </div>
     </div>
+
+     <!-- Seletor de imagens -->
+<div id="photoSelector" class="image-selection-container">
+    <div class="image-selection">
+        <h2>Escolha uma nova imagem de perfil</h2>
+        <div id="photoOptions" class="photo-options">
+            <!-- Opções de imagem serão preenchidas dinamicamente pelo JavaScript -->
+        </div>
+        <button id="confirmPhotoButton" class="btn btn-primary mt-3">Confirmar</button>
+    </div>
+</div>
+
 
     <footer>
         <p>© 2024 copyright MatchPoint</p>
