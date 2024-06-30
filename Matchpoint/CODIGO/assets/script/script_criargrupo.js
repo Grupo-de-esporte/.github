@@ -170,10 +170,10 @@ function salvarFormulario(event) {
     var grupos = JSON.parse(localStorage.getItem('grupos')) || [];
 
     // Verificar se o limite máximo de grupos foi atingido
-    if (grupos.length >= 4) {
-        exibirMensagemLimiteMaximo();
-        return;
-    }
+    //if (grupos.length >= ) {
+        //exibirMensagemLimiteMaximo();
+        //return;
+    //}
 
     var formulario = {
         "Criador" : Criador,
