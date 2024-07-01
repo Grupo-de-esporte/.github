@@ -11,7 +11,9 @@
     <link rel="stylesheet" href="assets/css/style_header.css">
     <link rel="stylesheet" href="assets/css/meuperfil.css">
     <script src="https://kit.fontawesome.com/9847d1c927.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -22,19 +24,12 @@
         </div>
         <nav class="secoes">
             <ul>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        Perfil
+
+                <li class="nav-item ">
+                    <a class="nav-link " href="Perfilvisualizavel.html" aria-expanded="false">
+                        Navegar
                     </a>
-                    <ul class="dropdown-menu ">
-                        <li><a class="dropdown-item" href="meuperfil.html">
-                                <p class="texto">Meu perfil </p>
-                            </a></li>
-                        <li><a class="dropdown-item" href="Perfilvisualizavel.html">
-                                <p class="texto">Navegar</p>
-                            </a></li>
-                    </ul>
+
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -44,23 +39,17 @@
                         <li><a class="dropdown-item" href="MeusGrupos.html">Meus Grupos</a></li>
                     </ul>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">Esportes</a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Volei</a></li>
-                        <li><a class="dropdown-item" href="#">Futebol</a></li>
-                        <li><a class="dropdown-item" href="#">Basquete</a></li>
-                    </ul>
-                </li>
+
                 <li><a href="Mapa.html">Mapa</a></li>
+                <li><a href="FAQ.html"><i class="fa-regular fa-circle-question"></i> FAQ</a></li>
             </ul>
         </nav>
-        <div class="FAQ">
-            <a href="FAQ.html"><i class="fa-regular fa-circle-question"></i> FAQ</a>
+        <div class="meuperfil">
+            <a href="meuperfil.html"> Meu perfil</a>
         </div>
     </header>
     <!-- Fim do cabeçalho -->
+
 
     <div class="container">
         <div class="profile">
@@ -69,42 +58,47 @@
                     <img id="userPhoto" src="" alt="Foto de perfil">
                     <button id="editPhotoButton">Editar Imagem</button>
                 </div>
-                
+
                 <div class="profile-details">
+
                     <h1 id="usernameDisplay"></h1>
+
                     <button onclick="changeUsername()">Alterar Nome de Usuário</button>
+                    <div class="editarperfil"> <i id="editUsernameIcon" class="fa-solid fa-pen-to-square"></i> </div>
                     <div class="bio-section">
                         <label for="bio-input">Biografia:</label>
                         <p id="bio" contenteditable="true"></p>
                     </div>
+
                     <button onclick="saveBio()">Salvar Bio</button>
                     <button onclick="changePassword()">Alterar Senha</button>
                 </div>
-                
+
             </div>
             <hr>
-            <h2>Comentários</h2>
-            <ul id="commentsList">
-                <!-- Exemplo de comentário -->
+            <div class="meusseguidores">
+            <ul >
                 <li>
-                    <p>Este é um comentário de exemplo.</p>
-                    <button>Editar</button>
-                    <button>Excluir</button>
+                    <div class="seguidores">Seguidores</div>
                 </li>
-            </ul>
+                <li>
+                    <div class="seguindo">Seguindo</div>
+                </li>
+            </ul></div>
         </div>
+
     </div>
 
-     <!-- Seletor de imagens -->
-<div id="photoSelector" class="image-selection-container">
-    <div class="image-selection">
-        <h2>Escolha uma nova imagem de perfil</h2>
-        <div id="photoOptions" class="photo-options">
-            <!-- Opções de imagem serão preenchidas dinamicamente pelo JavaScript -->
+    <!-- Seletor de imagens -->
+    <div id="photoSelector" class="image-selection-container">
+        <div class="image-selection">
+            <h2>Escolha uma nova imagem de perfil</h2>
+            <div id="photoOptions" class="photo-options">
+                <!-- Opções de imagem serão preenchidas dinamicamente pelo JavaScript -->
+            </div>
+            <button id="confirmPhotoButton" class="btn btn-primary mt-3">Confirmar</button>
         </div>
-        <button id="confirmPhotoButton" class="btn btn-primary mt-3">Confirmar</button>
     </div>
-</div>
 
 
     <footer>

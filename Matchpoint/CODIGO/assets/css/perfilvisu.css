@@ -70,6 +70,11 @@
     text-decoration: underline;
 }
 
+.card .card-text {
+    color: white; /* Cor branca para a bio */
+    font-size: 14px;
+}
+
 @media (max-width: 768px) {
     #container-dos-cards {
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));

@@ -188,8 +188,30 @@ body {
 .photo-option.selected {
     border-color: #f36f21; /* Cor da borda ao selecionar uma imagem */
 }
+.editarperfil{
+    color: #f36f21;
+    display: flex;
+    float: right;
+}
+
+#editUsernameIcon {
+    
+    font-size: 2em; /* Aumenta o tamanho do ícone para 2 vezes o tamanho padrão */
+    cursor: pointer; /* Altera o cursor para indicar que é clicável */
+}
 
 
+.meusseguidores ul {
+    list-style-type: none; /* Remove os marcadores de lista */
+    padding: 0;
+    margin: 0;
+    display: flex; /* Torna a lista um flex container */
+}
 
+.meusseguidores ul li {
+    margin-right: 10px; /* Espaçamento entre os itens */
+}
 
-
+.meusseguidores ul li:last-child {
+    margin-right: 0; /* Remove o espaçamento do último item */
+}

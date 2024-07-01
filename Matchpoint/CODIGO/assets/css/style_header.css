@@ -52,18 +52,18 @@
     color: #f36f21;
 }
 
-.FAQ {
+.meuperfil {
     float: right;
     color: white;
 }
 
-.FAQ a {
+.meuperfil a {
     text-decoration: none;
     color: white;
     font-size: large;
     font-family: 'Montserrat', sans-serif;
 }
 
-.FAQ a:hover {
+.meuperfil a:hover {
     color: #ccc;
 }
