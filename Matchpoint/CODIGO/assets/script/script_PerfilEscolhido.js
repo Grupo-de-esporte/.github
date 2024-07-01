@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
                             <div class="profile-details">
                                 <h1>${perfil.nome}</h1>
                                 <div class="bio-section">
-                                    <p><strong>Bio:</strong> ${perfil.bio}</p>
+                                    <p>${perfil.bio}</p>
                                 </div>
                             </div>
                         </div>
