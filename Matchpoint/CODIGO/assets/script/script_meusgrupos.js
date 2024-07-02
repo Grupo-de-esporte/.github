@@ -28,8 +28,8 @@ document.addEventListener("DOMContentLoaded", function() {
                 const card = createGroupCard(grupo, false);
 
                 const deleteButton = document.createElement('button');
-                deleteButton.className = 'deletar-button';
-                deleteButton.textContent = 'DELETAR';
+                deleteButton.className = 'btn btn-danger btn-sair';
+                deleteButton.textContent = 'Deletar';
                 deleteButton.onclick = () => showConfirmDelete(card, index, deleteButton);
 
                 card.appendChild(deleteButton);
@@ -93,6 +93,9 @@ document.addEventListener("DOMContentLoaded", function() {
         const sport = document.createElement('p');
         sport.textContent = grupo.esporte;
 
+        const participantsCount = document.createElement('p');
+        participantsCount.textContent = `Participantes: ${grupo.participantes.length + 1}`;
+
         const imageNumber = grupo.imagem;
         let imageName;
         if (grupo.esporte.toLowerCase() === "futebol") {
@@ -119,6 +122,15 @@ document.addEventListener("DOMContentLoaded", function() {
         card.appendChild(date);
         card.appendChild(location);
         card.appendChild(sport);
+        card.appendChild(participantsCount); // Adiciona o contador de participantes
+
+        // Botão "Mais Detalhes"
+        const detalhesButton = document.createElement('a');
+        detalhesButton.textContent = 'Mais Detalhes';
+        detalhesButton.className = 'btn btn-info btn-detalhes';
+        detalhesButton.href = `detalhes_grupo.html?grupo=${encodeURIComponent(grupo.nome)}`; // Link para detalhes do grupo
+        detalhesButton.target = '_blank'; // Abrir em uma nova aba/tab
+        card.appendChild(detalhesButton);
 
         return card;
     }

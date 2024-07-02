@@ -62,13 +62,15 @@ document.addEventListener("DOMContentLoaded", function() {
                     followButton.addEventListener('click', function() {
                         // Encontrar o índice do grupo atual no array de grupos
                         const index = grupos.findIndex(g => g.nome === grupo.nome);
-                        if (index !== -1) {
+                        if (index !== -1 && grupo.participantes.length+1 < grupo.jogadores) {
                             // Adicionar o usuário atual ao array participantes do grupo encontrado
                             grupos[index].participantes.push(user);
                             // Atualizar o localStorage com o grupo modificado
                             localStorage.setItem('grupos', JSON.stringify(grupos));
                             // Recarregar os grupos para refletir a mudança
                             loadGroups();
+                        } else {
+                            alert(`O grupo atingiu o número máximo de participantes (${grupo.jogadores}).`);
                         }
                     });
 
@@ -87,7 +89,7 @@ document.addEventListener("DOMContentLoaded", function() {
         title.textContent = grupo.nome;
 
         const date = document.createElement('p');
-        date.textContent = grupo.data;
+        date.textContent = 'Data e Horário: ' + grupo.data;
 
         const Criador = document.createElement('p');
         Criador.textContent = `Criador: ${grupo.Criador}`;
@@ -98,6 +100,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
         const sport = document.createElement('p');
         sport.textContent = `Esporte: ${grupo.esporte}`;
+
+        const participantsCount = document.createElement('p');
+        participantsCount.textContent = `Participantes: ${grupo.participantes.length + 1}`;
 
         const imageNumber = grupo.imagem;
         let imageName;
@@ -146,12 +151,22 @@ document.addEventListener("DOMContentLoaded", function() {
             buttonContainer.appendChild(followButton);
         }
 
+        // Botão "Mais Detalhes" que leva para uma nova página
+        const detalhesButton = document.createElement('a');
+        detalhesButton.textContent = 'Mais Detalhes';
+        detalhesButton.className = 'btn btn-info btn-detalhes';
+        detalhesButton.href = `detalhes_grupo.html?grupo=${encodeURIComponent(grupo.nome)}`; // Link para detalhes do grupo
+        detalhesButton.target = '_blank'; // Abrir em uma nova aba/tab
+
+        buttonContainer.appendChild(detalhesButton);
+
         card.appendChild(imgContainer);
         card.appendChild(title);
         card.appendChild(date);
         card.appendChild(Criador); // Adiciona o Criador antes de location e sport
         card.appendChild(location);
         card.appendChild(sport);
+        card.appendChild(participantsCount); // Adiciona o contador de participantes
         card.appendChild(buttonContainer);
 
         return card;

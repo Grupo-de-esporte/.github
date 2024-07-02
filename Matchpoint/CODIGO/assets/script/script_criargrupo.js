@@ -156,8 +156,8 @@ function salvarFormulario(event) {
     var nome = document.getElementById('nome').value;
     var esporte = document.getElementById('esporte').value;
     var horario = document.getElementById('horario').value;
-    var jogadores = document.getElementById('jogadores').value;
     var local = document.getElementById('local').value;
+    var jogadoresInput = document.getElementById('jogadores');
     var descricao = document.getElementById('descricao').value;
     var fotoInput = document.getElementById('fotoInput').value;
     var Criador = JSON.parse(localStorage.getItem('usuarioLogado')).usuario;
@@ -169,12 +169,13 @@ function salvarFormulario(event) {
 
     var grupos = JSON.parse(localStorage.getItem('grupos')) || [];
     var participantes = [];
-
+    var jogadoresValue = parseInt(jogadoresInput.value);
     var formulario = {
         "Criador" : Criador,
         "nome": nome,
         "data": dataInput.value + " " + horario,
         "local": local,
+        "jogadores" : jogadoresValue,
         "descricao" : descricao,
         "esporte": esporte,
         "imagem": parseInt(fotoInput),
