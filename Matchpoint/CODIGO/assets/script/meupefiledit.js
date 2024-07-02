@@ -152,14 +152,7 @@ function saveBio() {
     alert("Bio salva com sucesso!");
 }
 
-function updateUsernameInContacts(oldUsername, newUsername, loginData) {
-    loginData.contatos = loginData.contatos.map(contato => {
-        if (contato.nome === oldUsername) {
-            return { ...contato, nome: newUsername };
-        }
-        return contato;
-    });
-}
+
 
 function updatePasswordInContacts(username, newPassword, loginData) {
     loginData.contatos = loginData.contatos.map(contato => {
@@ -170,24 +163,7 @@ function updatePasswordInContacts(username, newPassword, loginData) {
     });
 }
 
-function changeUsername() {
-    const { profileData, loginData } = loadData();
-    const oldUsername = profileData.usuario;
 
-    const newUsername = prompt("Digite um novo nome de usuário:");
-    if (newUsername) {
-        profileData.usuario = newUsername;
-
-        updateUsernameInContacts(oldUsername, newUsername, loginData);
-
-        saveProfileData(profileData, loginData);
-
-        const usernameDisplay = document.getElementById('usernameDisplay');
-        if (usernameDisplay) {
-            usernameDisplay.textContent = newUsername;
-        }
-    }
-}
 
 function changePassword() {
     const { profileData, loginData } = loadData();

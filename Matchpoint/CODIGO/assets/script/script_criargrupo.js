@@ -168,12 +168,7 @@ function salvarFormulario(event) {
     }
 
     var grupos = JSON.parse(localStorage.getItem('grupos')) || [];
-
-    // Verificar se o limite máximo de grupos foi atingido
-    //if (grupos.length >= ) {
-        //exibirMensagemLimiteMaximo();
-        //return;
-    //}
+    var participantes = [];
 
     var formulario = {
         "Criador" : Criador,
@@ -183,6 +178,8 @@ function salvarFormulario(event) {
         "descricao" : descricao,
         "esporte": esporte,
         "imagem": parseInt(fotoInput),
+        "participantes" : participantes
+        
     };
 
     grupos.push(formulario);
