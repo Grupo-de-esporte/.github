@@ -167,34 +167,64 @@
 #fecharContainerButton:hover {
     color: #333;
 }
+
+
 .card {
-    width: 80%; /* Ajuste conforme necessário */
-    margin: 20px auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #1c1c1c; /* Cor de fundo cinza escuro */  
+    border: 1px solid #333;
+    border-radius: 5px;
+    max-width: 800px;
+    margin: 100px auto;
+    color: #f36f21;
 }
 
 #cardContent {
     display: flex;
     justify-content: space-between;
+    background-color: #1c1c1c; /* Cor de fundo cinza escuro */
 }
 
+/* Estilos para a lista de seguidores/seguindo */
 #followersList,
 #followingList {
-    width: calc(50% - 10px); /* 50% da largura menos o espaçamento entre eles */
+    width: 80%; /* Define a largura do container */
+    max-width: 600px; /* Define a largura máxima do container */
+    margin: 20px auto; /* Centraliza o container na página */
     padding: 10px;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
 }
 
-#followersList {
-    float: left;
+#followersList ul,
+#followingList ul {
+    
+    padding: 0;
+    margin: 0;
+    
+    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha conforme necessário */
 }
 
-#followingList {
-    float: right;
+#followersList ul li,
+#followingList ul li {
+    margin-right: 10px; /* Espaçamento entre os itens */
+    margin-bottom: 10px; /* Espaçamento abaixo dos itens */
+    color: #fff; /* Cor do texto branco */
 }
 
+#followersList ul li:last-child,
+#followingList ul li:last-child {
+    margin-right: 0; /* Remove o espaçamento do último item */
+}
 
+#followersList a,
+#followingList a {
+    display: block;
+    margin-bottom: 5px;
+    color: #fff; /* Cor do texto branco */
+    text-decoration: none;
+}
+
+#followersList a:hover,
+#followingList a:hover {
+    text-decoration: underline;
+    color: #ccc; /* Cor de hover para destacar */
+}
 

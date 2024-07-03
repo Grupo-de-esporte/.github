@@ -20,7 +20,8 @@ body {
     padding: 20px;
 }
 
-.left-cadastro, .right-cadastro {
+.left-cadastro,
+.right-cadastro {
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -33,16 +34,21 @@ body {
     font-size: 2.5em;
     margin-bottom: 20px;
     font-family: 'Montserrat', sans-serif;
-    text-align: center; /* Centraliza o texto */
-    margin-top: 20px; /* Adiciona uma margem superior */
+    text-align: center;
+    /* Centraliza o texto */
+    margin-top: 20px;
+    /* Adiciona uma margem superior */
 }
 
 .left-cadastro img {
-    max-width: 70%; /* Reduz o tamanho da imagem */
+    max-width: 70%;
+    /* Reduz o tamanho da imagem */
     height: auto;
     border-radius: 10px;
-    display: block; /* Garante que a imagem seja um bloco */
-    margin: 0 auto; /* Centraliza a imagem horizontalmente */
+    display: block;
+    /* Garante que a imagem seja um bloco */
+    margin: 0 auto;
+    /* Centraliza a imagem horizontalmente */
 }
 
 .card-cadastro {
@@ -113,9 +119,31 @@ body {
 .text-field a {
     color: #8d3b0b;
     text-decoration: none;
-    font-size: 0.8em; /* Reduz o tamanho do texto */
+    font-size: 0.8em;
+    /* Reduz o tamanho do texto */
 }
 
 .text-field a:hover {
     text-decoration: underline;
+}
+
+.btn-back {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #f44336;
+    /* Vermelho */
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.btn-back i {
+    font-size: 20px;
+}
+
+.fas {
+    color: white;
 }

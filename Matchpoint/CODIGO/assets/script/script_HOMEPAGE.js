@@ -156,7 +156,7 @@ document.addEventListener("DOMContentLoaded", function() {
         detalhesButton.textContent = 'Mais Detalhes';
         detalhesButton.className = 'btn btn-info btn-detalhes';
         detalhesButton.href = `detalhes_grupo.html?grupo=${encodeURIComponent(grupo.nome)}`; // Link para detalhes do grupo
-        detalhesButton.target = '_blank'; // Abrir em uma nova aba/tab
+       
 
         buttonContainer.appendChild(detalhesButton);
 
