@@ -9,5 +9,5 @@ Seja bem-vindo ao nosso perfil do trabalho de Front-end! 👋 Somos estudante de
 
   Seja você um atleta experiente ou alguém que está começando agora no mundo esportivo. Nosso público-alvo no momento são os universitários da PUC, mas também qualquer outra pessoa que deseje encontrar parceiros para a pratica de esportes. O sit# Perfil do Grupo de esportes Ciência da computação - PUC Minas
 
-Seja bem-vindo ao nosso perfil do trabalho de Front-end! 👋 Somos estudante de Ciência da computação na PUC Minas, buscando constantemente aprender e contribuir para a comunidade de desenvolvimento. Abaixo, compartilho um pouco sobre nosso projeto.
+
 
