@@ -9,10 +9,13 @@ function loadData() {
     let index = loginData.contatos.findIndex(contato => contato.nome === profileData.usuario);
     if (index !== -1) {
         profileData.bio = loginData.contatos[index].bio;
+        profileData.seguidores = loginData.contatos[index].seguidores || [];
+        profileData.seguindo = loginData.contatos[index].seguindo || [];
     }
 
     return { profileData, loginData, index };
 }
+
 
 function saveProfileData(profileData, loginData) {
     localStorage.setItem('usuarioLogado', JSON.stringify(profileData));
@@ -136,6 +139,21 @@ function loadProfile() {
     if (commentsList) {
         commentsList.innerHTML = ''; // Limpa a lista de comentários antes de recarregar
     }
+
+    // Adicionar contadores de seguidores e seguindo
+    const seguidoresCount = document.getElementById('seguidoresCount');
+    if (seguidoresCount) {
+        seguidoresCount.textContent = `Seguidores (${profileData.seguidores.length})`;
+    } else {
+        console.error("Element with ID 'seguidoresCount' not found");
+    }
+
+    const seguindoCount = document.getElementById('seguindoCount');
+    if (seguindoCount) {
+        seguindoCount.textContent = `Seguindo (${profileData.seguindo.length})`;
+    } else {
+        console.error("Element with ID 'seguindoCount' not found");
+    }
 }
 
 function saveBio() {
@@ -208,3 +226,59 @@ function changePassword() {
         alert("Senha alterada com sucesso!");
     }
 }
+
+function showFollowersOrFollowing(type) {
+    const { profileData } = loadData();
+    let list = [];
+    let listTitle = '';
+    let listContainerId = '';
+
+    if (type === 'seguidores') {
+        list = profileData.seguidores;
+        listTitle = 'Seguidores';
+        listContainerId = 'followersList';
+    } else if (type === 'seguindo') {
+        list = profileData.seguindo;
+        listTitle = 'Seguindo';
+        listContainerId = 'followingList';
+    }
+
+    const cardContent = document.getElementById('cardContent');
+    if (cardContent) {
+        // Limpa o conteúdo anterior, se houver
+        cardContent.innerHTML = '';
+
+        // Adiciona o título
+        const titleElement = document.createElement('h3');
+        titleElement.textContent = listTitle;
+        cardContent.appendChild(titleElement);
+
+        // Adiciona o container da lista
+        const listContainer = document.createElement('div');
+        listContainer.id = listContainerId;
+        cardContent.appendChild(listContainer);
+
+        // Adiciona a lista
+        const listElement = document.createElement('ul');
+        list.forEach(item => {
+            const listItem = document.createElement('li');
+            const link = document.createElement('a');
+            link.href = `perfilescolhido.html?id=${item}`;
+            link.textContent = item;
+            listItem.appendChild(link);
+            listElement.appendChild(listItem);
+        });
+        listContainer.appendChild(listElement);
+    } else {
+        console.error(`Element with ID 'cardContent' not found`);
+    }
+}
+
+
+
+
+
+
+
+document.getElementById('seguidoresCount').addEventListener('click', () => showFollowersOrFollowing('seguidores'));
+document.getElementById('seguindoCount').addEventListener('click', () => showFollowersOrFollowing('seguindo'));
