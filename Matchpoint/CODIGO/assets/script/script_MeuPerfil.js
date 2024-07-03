@@ -48,7 +48,7 @@ function abrirSeletorDeImagens() {
 
     photoOptions.innerHTML = ''; // Limpa as opções anteriores
 
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < 8; i++) {
         if (i !== fotoIndex) {
             const imgOption = document.createElement('img');
             imgOption.src = `assets/img/perfil${i}.jpg`;

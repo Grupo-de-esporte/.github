@@ -67,3 +67,23 @@
 .meuperfil a:hover {
     color: #ccc;
 }
+
+.meuperfil .dropdown-menu .dropdown-item {
+    color: #f36f21;
+    font-family: 'Montserrat', sans-serif;
+    width: auto;
+    padding: 5px 10px;
+    font-size: medium;
+    line-height: 1.5;
+}
+
+.meuperfil .dropdown-menu .dropdown-item:hover {
+    background-color: #555;
+    color: #f36f21;
+
+}
+
+.meuperfil .dropdown-menu {
+    background-color: #333;
+    border: none;
+}

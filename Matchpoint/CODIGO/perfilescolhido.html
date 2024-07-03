@@ -16,32 +16,46 @@
 </head>
 
 <body onload="salvaLocalStorage()">
-    <header class="cabecalho">
-        <div class="imglogo">
-            <a href="HomePage.html"><img src="assets/img/matchpoint.png" alt="Logo MatchPoint"></a>
-        </div>
-        <nav class="secoes">
-            <ul>
-                <li class="nav-item">
-                    <a class="nav-link" href="Perfilvisualizavel.html" aria-expanded="false">Navegar</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">Grupos</a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="CriarGrupo.html">Criar Grupo</a></li>
-                        <li><a class="dropdown-item" href="MeusGrupos.html">Meus Grupos</a></li>
-                        <li><a class="dropdown-item" href="HomePage.html">Todos Grupos</a></li>
-                    </ul>
-                </li>
-                <li><a href="Mapa.html">Mapa</a></li>
-                <li><a href="FAQ.html"><i class="fa-regular fa-circle-question"></i> FAQ</a></li>
+   <!-- Início do cabeçalho -->
+   <header class="cabecalho">
+    <div class="imglogo">
+        <a href="HomePage.html"><img src="assets/img/matchpoint.png" alt="Logo MatchPoint"></a>
+    </div>
+    <nav class="secoes">
+        <ul>
+            <li class="nav-item">
+                <a class="nav-link" href="Perfilvisualizavel.html" aria-expanded="false">Navegar</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">Grupos</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="CriarGrupo.html">Criar Grupo</a></li>
+                    <li><a class="dropdown-item" href="MeusGrupos.html">Meus Grupos</a></li>
+                    <li><a class="dropdown-item" href="HomePage.html">Todos Grupos</a></li>
+                </ul>
+            </li>
+            <li><a href="Mapa.html">Mapa</a></li>
+            <li><a href="FAQ.html"><i class="fa-regular fa-circle-question"></i> FAQ</a></li>
+        </ul>
+    </nav>
+
+    <div class="meuperfil">
+        <li class="nav-item dropdown" style="list-style: none;">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <span id="userNameDropdown"></span>
+            </a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="meuperfil.html">Meu Perfil</a></li>
+                <li><a class="dropdown-item" href="paginainicial.html">Sair</a></li>
             </ul>
-        </nav>
-        <div class="meuperfil">
-            <a href="meuperfil.html"> Meu perfil</a>
-        </div>
-    </header>
+        </li>
+    </div>
+    
+
+
+</header>
+<!-- Fim do cabeçalho -->
 
     <main>
         <div class="container">
@@ -61,7 +75,8 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script src="assets/script/script_PerfilEscolhido.js"></script>
+    <script src="assets/script/script_PerfilEscolhido.js"></script>    <script src="assets/script/cabecalho.js"></script>
+
 </body>
 
 </html>

@@ -37,7 +37,7 @@
 }
 
 .btn-deletar {
-    margin-top: 20px;
+    margin-top: 50px;
     padding: 15px;
     border: none;
     border-radius: 5px;
@@ -87,4 +87,41 @@
 
 .confirm-no:hover {
     background-color: #666;
+}
+
+.grupo-details {
+    background-color: #1f1f1f;
+    padding: 30px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 800px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    margin: 20px auto; /* Centraliza horizontalmente */
+    position: relative; /* Adiciona posição relativa para posicionamento absoluto */
+
+    /* Estilo para o botão "Voltar" */
+    padding-top: 20px; /* Espaçamento acima do botão */
+}
+
+.grupo-details button {
+    position: absolute;
+    top: 10px; /* Distância do topo */
+    right: 10px; /* Distância da direita */
+    background-color: #f36f21; /* Cor laranja */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.grupo-details button a {
+    text-decoration: none;
+    color: white;
+}
+
+.grupo-details button:hover {
+    background-color: #ffa95f; /* Cor laranja mais clara ao passar o mouse */
 }

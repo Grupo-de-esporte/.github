@@ -20,16 +20,17 @@ document.addEventListener("DOMContentLoaded", function() {
             const participantes = [grupo.Criador, ...grupo.participantes];
 
             grupoDetailsContent.innerHTML = `
-                <p><strong>Nome:</strong> ${grupo.nome}</p>
-                <p><strong>Data e Horário:</strong> ${grupo.data}</p>
-                <p><strong>Criador:</strong> ${grupo.Criador}</p>
-                <p><strong>Local:</strong> ${grupo.local}</p>
-                <p><strong>Esporte:</strong> ${grupo.esporte}</p>
-                <p><strong>Participantes:</strong> ${participantes.join(', ')}</p>
-                <p><strong>Descrição:</strong> ${grupo.descricao}</p>
+                <p><strong><span style="color: #f36f21;">Nome: </strong></span><span style="color: white;"> ${grupo.nome}</span></p>
+                <p><strong><span style="color: #f36f21;">Data e Horário:</strong></span><span style="color: white;"> ${grupo.data}</span></p>
+                <p><strong><span style="color: #f36f21;">Criador:</strong></span><span style="color: white;"> ${grupo.Criador}</span></p>
+                <p><strong><span style="color: #f36f21;">Local:</strong></span><span style="color: white;"> ${grupo.local}</span></p>
+                <p><strong><span style="color: #f36f21;">Esporte:</strong></span><span style="color: white;"> ${grupo.esporte}</span></p>
+                <p><strong><span style="color: #f36f21;">Participantes:</strong> </span><span style="color: white;">${participantes.join(', ')}</span></p>
+                <p><strong><span style="color: #f36f21;">Descrição:</strong> </span><span style="color: white;">${grupo.descricao}</span></p>
                 <img src="${imgUrl}" alt="Imagem do grupo ${grupo.nome}">
             `;
-
+        
+        
             // Verificar se o usuário atual é o criador do grupo
             const user = JSON.parse(localStorage.getItem('usuarioLogado')).usuario;
             const isCriador = grupo.Criador === user;

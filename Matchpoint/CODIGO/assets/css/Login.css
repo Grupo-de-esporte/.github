@@ -119,3 +119,22 @@ body {
 .text-field a:hover {
     text-decoration: underline;
 }
+.btn-back {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #f44336; /* Vermelho */
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .btn-back i {
+    font-size: 20px;
+  }
+  .fas{
+    color: white;
+  }
+  

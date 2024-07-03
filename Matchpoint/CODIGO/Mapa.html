@@ -14,37 +14,44 @@
 </head>
 
 <body>
-       <!-- Início do cabeçalho -->
+         <!-- Início do cabeçalho -->
     <header class="cabecalho">
         <div class="imglogo">
             <a href="HomePage.html"><img src="assets/img/matchpoint.png" alt="Logo MatchPoint"></a>
         </div>
         <nav class="secoes">
             <ul>
-                
-                <li class="nav-item ">
-                    <a class="nav-link " href="Perfilvisualizavel.html" 
-                        aria-expanded="false">
-                        Navegar
-                    </a>
-                  
+                <li class="nav-item">
+                    <a class="nav-link" href="Perfilvisualizavel.html" aria-expanded="false">Navegar</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Grupos</a>
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">Grupos</a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="CriarGrupo.html" >Criar Grupo</a></li>
-                        <li><a class="dropdown-item" href="MeusGrupos.html" >Meus Grupos</a></li>
-                        <li><a class="dropdown-item" href="HomePage.html" >Todos Grupos</a></li>
+                        <li><a class="dropdown-item" href="CriarGrupo.html">Criar Grupo</a></li>
+                        <li><a class="dropdown-item" href="MeusGrupos.html">Meus Grupos</a></li>
+                        <li><a class="dropdown-item" href="HomePage.html">Todos Grupos</a></li>
                     </ul>
                 </li>
-             
                 <li><a href="Mapa.html">Mapa</a></li>
                 <li><a href="FAQ.html"><i class="fa-regular fa-circle-question"></i> FAQ</a></li>
             </ul>
         </nav>
+
         <div class="meuperfil">
-            <a href="meuperfil.html"> Meu perfil</a>
+            <li class="nav-item dropdown" style="list-style: none;">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <span id="userNameDropdown"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="meuperfil.html">Meu Perfil</a></li>
+                    <li><a class="dropdown-item" href="paginainicial.html">Sair</a></li>
+                </ul>
+            </li>
         </div>
+        
+
+
     </header>
     <!-- Fim do cabeçalho -->
 
@@ -101,7 +108,8 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <!--script q faz o javacript funcionar -->
-    <script src="assets/script/mapa.js"></script>
+    <script src="assets/script/mapa.js"></script>    <script src="assets/script/cabecalho.js"></script>
+
 </body>
 
 </html>
