@@ -207,3 +207,36 @@ function verMeusGrupos() {
     // Altera o URL para a página desejada
     window.location.href = 'MeusGrupos.html';
 }
+// Função para exibir o contêiner com a imagem do local
+function exibirImagemLocal() {
+    var localImageContainer = document.getElementById('localImageContainer');
+    localImageContainer.style.display = 'block';
+}
+
+// Adicione isso ao script no final, antes do </script> que fecha o body
+document.addEventListener('DOMContentLoaded', function() {
+    var localInput = document.getElementById('local');
+
+    localInput.addEventListener('click', function() {
+        exibirImagemLocal();
+    });
+});
+// script.js
+document.addEventListener("DOMContentLoaded", function() {
+    const areas = document.querySelectorAll(".hover-area");
+    areas.forEach(area => {
+        area.addEventListener("click", function(event) {
+            event.preventDefault();
+areas.forEach(a => a.classList.remove("selected"));
+this.classList.add("selected");
+
+const localSelecionado = this.getAttribute("data-local");
+document.getElementById('local').value = localSelecionado;
+
+            // Aqui você pode adicionar qualquer lógica adicional necessária
+        });
+    });
+});
+function ocultarLocalContainer() {
+    document.getElementById('localImageContainer').style.display = 'none';
+}

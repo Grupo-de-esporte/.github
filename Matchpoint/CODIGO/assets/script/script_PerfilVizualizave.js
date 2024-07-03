@@ -30,7 +30,7 @@ function cards(searchTerm = '') {
                 </div>`;
 
             // Criar o link para o perfil escolhido
-            let link = `<a href="perfilescolhido.html?id=${usuario.email}" class="text-decoration-none text-dark">${cardDiv}</a>`;
+            let link = `<a href="perfilescolhido.html?id=${usuario.nome}" class="text-decoration-none text-dark">${cardDiv}</a>`;
 
             // Adicionar o card ao container
             container.insertAdjacentHTML('beforeend', link);

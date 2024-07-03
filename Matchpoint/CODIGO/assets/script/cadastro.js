@@ -100,7 +100,9 @@ function incluirContato() {
     email: strEmail,
     senha: strSenha,
     foto: 0,
-    bio: ""
+    bio: "",
+    seguidores: [],
+    seguindo: [],
   };
 
   // Adiciona o novo contato ao array de contatos
